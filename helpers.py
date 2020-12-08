@@ -1,7 +1,7 @@
-import matplotlib
 import matplotlib.pyplot as plt
 
-def plotarGraf(gen, best_per_gen):
+
+def plotChart(gen, best_per_gen):
     t = gen
     s = best_per_gen
 
