@@ -1,16 +1,10 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+from AlgoritmosGeneticos import AlgoritmosGeneticos
+from Graficos import plotarGraf
+import random
+from deap.benchmarks.binary import chuang_f1
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    ag = AlgoritmosGeneticos()
+    toolbox = ag.config_1(random.randint, 0, 1, chuang_f1)
+    results = ag.start(toolbox, 50, 1)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    plotarGraf(results[1].select('gen'), results[1].select('min'))
