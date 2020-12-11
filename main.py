@@ -1,6 +1,6 @@
 from genetic_algorithms import GeneticAlgorithms
 from helpers import plotChart, generateWord
-from Configurations import Configurations
+from configuration import Configurations
 import random
 from deap import tools
 from deap.benchmarks.binary import chuang_f1
