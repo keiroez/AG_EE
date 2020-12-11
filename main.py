@@ -1,5 +1,6 @@
 from genetic_algorithms import GeneticAlgorithms
 from helpers import plotChart, generateWord
+from Configurations import Configurations
 import random
 from deap import tools
 from deap.benchmarks.binary import chuang_f1
@@ -19,6 +20,9 @@ if __name__ == '__main__':
     # plotChart(results[1].select('gen'), results[1].select('min'))
 
     # PALAVRA CHAVE
-    ag.configShuffleIndexesTournament(generateWord, len(WORD_BASE), 8, evaluateSecretWord, (1.0,), 10, tools.cxOnePoint)
-    results = ag.start(300, 10, 1000)
+    conf_1 = Configurations()
+    tool = conf_1.configShuffleIndexesTournament(
+        generateWord, len(WORD_BASE), 8, evaluateSecretWord, (1.0,), 10, tools.cxOnePoint
+    )
+    results = ag.start(300, 10, 1000, tool)
     plotChart(results[1].select('gen'), results[1].select('min'))
