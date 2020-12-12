@@ -1,5 +1,6 @@
 import string
 import random
+import csv
 import matplotlib.pyplot as plt
 from deap import creator, base, tools
 from evaluations import WORD_BASE
@@ -35,8 +36,8 @@ def baseToolboxSecretWord():
     creator.create("FitnessType", base.Fitness, weights=(1.0,))
     creator.create("Individual", list, fitness=creator.FitnessType)
     toolbox = base.Toolbox()
-    toolbox.register("attr", random.choice, len(WORD_BASE), 8,)
-    toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.attr, 10)
+    toolbox.register("attr", generateWord, 0, len(WORD_BASE),)
+    toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.attr,)
     toolbox.register("population", tools.initRepeat, list, toolbox.individual)
     return toolbox
 
@@ -48,3 +49,9 @@ def baseToolboxChuang_f1():
     toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr, 10)
     toolbox.register("population", tools.initRepeat, list, toolbox.individual)
     return toolbox
+
+
+def saveBestResult(data):
+    writer = csv.writer(open("best_result.csv", 'w'))
+    for row in data:
+        writer.writerow(row)

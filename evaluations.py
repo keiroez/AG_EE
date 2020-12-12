@@ -1,4 +1,4 @@
-WORD_BASE = "ydetsyagihsjokoskjkswksjkwjskwjskjwkj"
+WORD_BASE = "josediogo"
 
 def colisionDiagonal(oneQueen, twoQueen):
     if (abs(oneQueen[0] - twoQueen[0]) == abs(oneQueen[1] - twoQueen[1])):
