@@ -26,9 +26,10 @@ def generateWord(min, max):
 def baseToolboxEightQueens():
     creator.create("FitnessType", base.Fitness, weights=(-1.0,))
     creator.create("Individual", list, fitness=creator.FitnessType)
+    TAMANHO = 8
     toolbox = base.Toolbox()
-    toolbox.register("attr", random.sample, range(8), 8,)
-    toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr, 10)
+    toolbox.register("FitnessType", random.sample, range(TAMANHO), TAMANHO)
+    toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.FitnessType)
     toolbox.register("population", tools.initRepeat, list, toolbox.individual)
     return toolbox
 

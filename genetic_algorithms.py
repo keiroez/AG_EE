@@ -1,8 +1,4 @@
-import random
 import numpy
-
-from deap import base
-from deap import creator
 from deap import tools
 from deap import algorithms
 
