@@ -1,6 +1,8 @@
 import string
 import random
 import csv
+from ast import literal_eval
+
 import matplotlib.pyplot as plt
 from deap import creator, base, tools
 from evaluations import WORD_BASE
@@ -52,7 +54,14 @@ def baseToolboxChuang_f1():
     return toolbox
 
 
-def saveBestResult(data):
-    writer = csv.writer(open("best_result.csv", 'w'))
-    for row in data:
-        writer.writerow(row)
+def saveBestResult(data, path):
+    writer = csv.writer(open(path, 'a+'))
+    writer.writerow(data)
+
+def showResultLog(path):
+    with open(path, 'r') as file:
+        reader = csv.reader(file)
+        for logs in reader:
+            for log in logs:
+                array_log = literal_eval(log)
+                print(array_log)
