@@ -5,7 +5,7 @@ from ast import literal_eval
 
 import matplotlib.pyplot as plt
 from deap import creator, base, tools
-from evaluations import WORD_BASE
+from evaluations import WORD_BASE, SIZE
 
 
 def plotChart(gen, best_per_gen):
@@ -55,13 +55,35 @@ def baseToolboxChuang_f1():
 
 
 def saveBestResult(data, path):
-    writer = csv.writer(open(path, 'a+'))
+    writer = csv.writer(open(path, 'w'))
     writer.writerow(data)
 
-def showResultLog(path):
+def getGenSolveProblem(path, problemType, maxValue=None, minValue=None):
+    gen = SIZE
+    best = None
     with open(path, 'r') as file:
         reader = csv.reader(file)
-        for logs in reader:
-            for log in logs:
-                array_log = literal_eval(log)
-                print(array_log)
+        if problemType == 'min':
+            for logs in reader:
+                for log in logs:
+                    array_log = literal_eval(log)
+                    if array_log['min'] == minValue:
+                        gen = array_log['gen']
+                        best = array_log['min']
+                        break
+                    if array_log['gen'] == SIZE and best is None:
+                        best = array_log['min']
+        else:
+            val = 0
+            for logs in reader:
+                for log in logs:
+                    array_log = literal_eval(log)
+                    if array_log['max'] == maxValue:
+                        gen = array_log['gen']
+                        best = array_log['max']
+                        break
+                    if array_log['gen'] == SIZE and best is None:
+                        best = array_log['max']
+
+
+    return gen, best

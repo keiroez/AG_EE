@@ -1,5 +1,5 @@
 WORD_BASE = "izaquieldequeirozferreira"
-
+SIZE = 1000
 
 def colisionDiagonal(oneQueen, twoQueen):
     if (abs(oneQueen[0] - twoQueen[0]) == abs(oneQueen[1] - twoQueen[1])):
