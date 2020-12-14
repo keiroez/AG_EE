@@ -7,28 +7,28 @@ from evaluations import  SIZE
 def chuangF1AG(ag, configuration):
     baseChuang = baseToolboxChuang_f1()
 
-    print("********** chuang f1 - mate: cxTwoPoint - mutate: mutShuffleIndexes - select: selTournament **********")
+    print("********** chuang f1 - mate: cxOnePoint - mutate: mutShuffleIndexes - select: selTournament **********")
     toolShuffleIndexesTournament = configuration.configShuffleIndexesTournament(baseChuang, chuang_f1,
-                                                                                tools.cxTwoPoint)
-    resultsShuffleIndexesTournament = ag.start(100, 1, SIZE, toolShuffleIndexesTournament)
+                                                                                tools.cxOnePoint)
+    resultsShuffleIndexesTournament = ag.start(200, 1, SIZE, toolShuffleIndexesTournament)
     saveBestResult(resultsShuffleIndexesTournament[1], "results/ag_chuang_f1_shuffle_indexes_tournament.csv")
     print("")
 
-    print("********** chuang f1 - mate: cxTwoPoint - mutate: mutShuffleIndexes - select: selRoulette **********")
+    print("********** chuang f1 - mate: cxOnePoint - mutate: mutShuffleIndexes - select: selRoulette **********")
     toolShuffleIndexesRoulette = configuration.configShuffleIndexesRoulette(baseChuang, chuang_f1,
-                                                                            tools.cxTwoPoint)
-    resultsShuffleIndexesRoulette = ag.start(100, 1, SIZE, toolShuffleIndexesRoulette)
+                                                                            tools.cxOnePoint)
+    resultsShuffleIndexesRoulette = ag.start(200, 1, SIZE, toolShuffleIndexesRoulette)
     saveBestResult(resultsShuffleIndexesRoulette[1], "results/ag_chuang_f1_shuffle_indexes_roulette.csv")
     print("")
 
-    print("********** chuang f1 - mate: cxTwoPoint - mutate: mutUniformInt - select: selTournament **********")
-    toolUniformIntTournament = configuration.configUniformIntTournament(baseChuang, chuang_f1, tools.cxTwoPoint)
-    resultsUniformIntTournament = ag.start(100, 1, SIZE, toolUniformIntTournament)
+    print("********** chuang f1 - mate: cxOnePoint - mutate: mutUniformInt - select: selTournament **********")
+    toolUniformIntTournament = configuration.configUniformIntTournament(baseChuang, chuang_f1, tools.cxOnePoint)
+    resultsUniformIntTournament = ag.start(200, 1, SIZE, toolUniformIntTournament)
     saveBestResult(resultsUniformIntTournament[1], "results/ag_chuang_f1_uniform_int_tournament.csv")
     print("")
 
-    print("********** chuang f1 - mate: cxTwoPoint - mutate: mutUniforInt - select: selRoulette **********")
-    toolUniformIntRoulette = configuration.configUniformIntRoulette(baseChuang, chuang_f1, tools.cxTwoPoint)
-    resultsUniformIntRoulette = ag.start(100, 1, SIZE, toolUniformIntRoulette)
+    print("********** chuang f1 - mate: cxOnePoint - mutate: mutUniforInt - select: selRoulette **********")
+    toolUniformIntRoulette = configuration.configUniformIntRoulette(baseChuang, chuang_f1, tools.cxOnePoint)
+    resultsUniformIntRoulette = ag.start(200, 1, SIZE, toolUniformIntRoulette)
     saveBestResult(resultsUniformIntRoulette[1], "results/ag_chuang_f1_uniform_int_roulette.csv")
     print("")

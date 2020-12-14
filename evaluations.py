@@ -1,4 +1,4 @@
-WORD_BASE = "izaquieldequeirozferreira"
+WORD_BASE = "computacaoevolucionaria"
 SIZE = 1000
 
 def colisionDiagonal(oneQueen, twoQueen):

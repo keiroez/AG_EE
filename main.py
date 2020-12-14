@@ -3,7 +3,7 @@ from configuration import Configuration
 from secretWord import secretWordAG
 from eightQueens import eightQueensAG
 from chuangF1 import chuangF1AG
-from helpers import getGenSolveProblem
+from helpers import getGenSolveProblem, getLogArray, plotCharComparation
 
 if __name__ == '__main__':
     ag = GeneticAlgorithms()
@@ -12,7 +12,7 @@ if __name__ == '__main__':
     #secretWordAG(ag, configuration)
     #eightQueensAG(ag, configuration)
     #chuangF1AG(ag, configuration)
-
+'''
     bestGenSecretWordShuffleIndexesRoulette = getGenSolveProblem('results/ag_secret_word_shuffle_indexes_roulette.csv', 'max', maxValue=1)
     bestGenSecretWordShuffleIndexesTournament = getGenSolveProblem('results/ag_secret_word_shuffle_indexes_tournament.csv', 'max', maxValue=1)
     bestGenSecretWordFlipBitRoulette = getGenSolveProblem('results/ag_secret_word_flip_bit_roulette.csv', 'max', maxValue=1)
@@ -43,3 +43,11 @@ if __name__ == '__main__':
     print("(CHUANG F1) - Melhor geração da conf de shuffleIndexesTournament: {}".format(bestGenChuangShuffleIndexesTournament))
     print("(CHUANG F1) - Melhor geração da conf de uniformIntRoulette: {}".format(bestGenChuangUniformIntRoulette))
     print("(CHUANG F1) - Melhor geração da conf de uniformIntTournament: {}".format(bestGenChuangUniformIntTournament))
+'''
+
+best1, gen1 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_roulette.csv')
+best2, gen2 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_tournament.csv')
+best3, gen3 = getLogArray('min', 'results/ag_eight_queens_uniform_int_roulette.csv')
+best4, gen4 = getLogArray('min', 'results/ag_eight_queens_uniform_int_tournament.csv')
+
+plotCharComparation(best1, gen1, best2, gen2, best3, gen3, best4, gen4)

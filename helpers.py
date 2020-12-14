@@ -20,24 +20,21 @@ def plotChart(gen, best_per_gen):
 
     plt.show()
 
-def plotCharComparation(best1, best2, best3, best4):
-
-    x = best1['gen']
-    y = best1['max']
+def plotCharComparation(best1, gen1, best2, gen2, best3, gen3, best4, gen4):
 
     fig, ax = plt.subplots()
 
-
-    line1, = ax.plot(best1['gen'], best1['max'], label='Melhor resultado')
+    line1, = ax.plot(gen1, best1, label='Melhor resultado')
     line1.set_dashes([2, 2, 10, 2])
 
-    line2, = ax.plot(best2['gen'], best2['max'], label='2 melhor resultado')
+    line2, = ax.plot(gen2, best2, label='2 melhor resultado')
 
-    line3, = ax.plot(best3['gen'], best3['max'], label='3 melhor resultado')
+    line3, = ax.plot(gen3, best3, label='3 melhor resultado')
 
-    line4, = ax.plot(best4['gen'], best4['max'], label='4 melhor resultado')
+    line4, = ax.plot(gen4, best4, label='4 melhor resultado')
 
     ax.legend()
+    plt.yscale('log')
     plt.show()
 
 def generateWord(min, max):
@@ -106,3 +103,16 @@ def getGenSolveProblem(path, problemType, maxValue=None, minValue=None):
 
 
     return gen, best
+
+def getLogArray(col, path):
+    list = []
+    gen = []
+    with open(path, 'r') as file:
+        reader = csv.reader(file)
+        for logs in reader:
+            for log in logs:
+                array_log = literal_eval(log)
+                list.append(array_log[col])
+                gen.append(array_log['gen'])
+
+    return list, gen
