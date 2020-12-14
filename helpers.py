@@ -20,6 +20,25 @@ def plotChart(gen, best_per_gen):
 
     plt.show()
 
+def plotCharComparation(best1, best2, best3, best4):
+
+    x = best1['gen']
+    y = best1['max']
+
+    fig, ax = plt.subplots()
+
+
+    line1, = ax.plot(best1['gen'], best1['max'], label='Melhor resultado')
+    line1.set_dashes([2, 2, 10, 2])
+
+    line2, = ax.plot(best2['gen'], best2['max'], label='2 melhor resultado')
+
+    line3, = ax.plot(best3['gen'], best3['max'], label='3 melhor resultado')
+
+    line4, = ax.plot(best4['gen'], best4['max'], label='4 melhor resultado')
+
+    ax.legend()
+    plt.show()
 
 def generateWord(min, max):
     return ''.join([random.choice(string.ascii_letters) for _ in range(max)])
