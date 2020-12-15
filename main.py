@@ -1,15 +1,31 @@
 from genetic_algorithms import GeneticAlgorithms
+from evolutionary_strategies import EvolutionaryStrategies
 from configuration import Configuration
-from secretWord import secretWordAG
-from eightQueens import eightQueensAG
-from chuangF1 import chuangF1AG
+from secretWord import *
+from eightQueens import *
+from chuangF1 import *
 from helpers import getGenSolveProblem, getLogArray, plotCharComparation
 
 if __name__ == '__main__':
     ag = GeneticAlgorithms()
+    ee = EvolutionaryStrategies()
     configuration = Configuration()
 
-    #secretWordAG(ag, configuration)
+    secretWordAG(ag, configuration)
+    secretWordEEPlus(ee, configuration)
+    secretWordEEComma(ee, configuration)
+
+    eightQueensAG(ag, configuration)
+    eightQueensEEPlus(ee, configuration)
+    eightQueensEEComma(ee, configuration)
+
+    chuangF1AG(ag, configuration)
+    chuangF1EEComma(ee, configuration)
+    chuangF1EEPlus(ee, configuration)
+
+
+
+    # secretWordAG(ag, configuration)
     #eightQueensAG(ag, configuration)
     #chuangF1AG(ag, configuration)
 '''
@@ -45,9 +61,9 @@ if __name__ == '__main__':
     print("(CHUANG F1) - Melhor geração da conf de uniformIntTournament: {}".format(bestGenChuangUniformIntTournament))
 '''
 
-best1, gen1 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_roulette.csv')
-best2, gen2 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_tournament.csv')
-best3, gen3 = getLogArray('min', 'results/ag_eight_queens_uniform_int_roulette.csv')
-best4, gen4 = getLogArray('min', 'results/ag_eight_queens_uniform_int_tournament.csv')
-
-plotCharComparation(best1, gen1, best2, gen2, best3, gen3, best4, gen4)
+# best1, gen1 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_roulette.csv')
+# best2, gen2 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_tournament.csv')
+# best3, gen3 = getLogArray('min', 'results/ag_eight_queens_uniform_int_roulette.csv')
+# best4, gen4 = getLogArray('min', 'results/ag_eight_queens_uniform_int_tournament.csv')
+#
+# plotCharComparation(best1, gen1, best2, gen2, best3, gen3, best4, gen4)
