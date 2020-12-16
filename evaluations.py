@@ -1,5 +1,6 @@
 WORD_BASE = "computacaoevolutiva"
 SIZE = 1000
+POPULATION = 50
 
 def colisionDiagonal(oneQueen, twoQueen):
     if (abs(oneQueen[0] - twoQueen[0]) == abs(oneQueen[1] - twoQueen[1])):

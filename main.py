@@ -12,12 +12,12 @@ if __name__ == '__main__':
     ag = GeneticAlgorithms()
     ee = EvolutionaryStrategies()
     configuration = Configuration()
-    ''' 
+
+
     readGrienwank()
     readEightQueens()
     readSecretWord()
-
-    
+'''
     grienwankAG(ag, configuration)
     grienwankEEComma(ee, configuration)
     grienwankEEPlus(ee, configuration)
