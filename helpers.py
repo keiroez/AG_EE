@@ -64,8 +64,20 @@ def baseToolboxChuang_f1():
     creator.create("FitnessType", base.Fitness, weights=(-1.0,))
     creator.create("Individual", list, fitness=creator.FitnessType)
     toolbox = base.Toolbox()
-    toolbox.register("attr", random.randint, 0, 1,)
+    toolbox.register("attr", random.randint, 0, 1)
     toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr, 10)
+    toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+    return toolbox
+
+def baseToolGriewank():
+    creator.create("FitnessType", base.Fitness, weights=(-1.0,))
+    creator.create("Individual", list, fitness=creator.FitnessType)
+    toolbox = base.Toolbox()
+    # Attribute generator
+    toolbox.register("attr_float", random.randint, -600, 600)
+    # Structure initializers
+    toolbox.register("individual", tools.initRepeat, creator.Individual,
+                     toolbox.attr_float, 10)
     toolbox.register("population", tools.initRepeat, list, toolbox.individual)
     return toolbox
 
