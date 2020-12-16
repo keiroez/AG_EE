@@ -12,11 +12,12 @@ if __name__ == '__main__':
     ag = GeneticAlgorithms()
     ee = EvolutionaryStrategies()
     configuration = Configuration()
+    ''' 
     readGrienwank()
     readEightQueens()
     readSecretWord()
 
-    ''' 
+    
     grienwankAG(ag, configuration)
     grienwankEEComma(ee, configuration)
     grienwankEEPlus(ee, configuration)
@@ -29,7 +30,7 @@ if __name__ == '__main__':
     eightQueensEEPlus(ee, configuration)
     eightQueensEEComma(ee, configuration)
     
-  
+ 
 
 best1, gen1 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_roulette.csv')
 best2, gen2 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_tournament.csv')

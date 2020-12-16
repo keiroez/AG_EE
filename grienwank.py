@@ -10,26 +10,26 @@ def grienwankAG(ag, configuration):
     print("********** grienwank - mate: cxTwoPoint - mutate: mutShuffleIndexes - select: selTournament **********")
     toolShuffleIndexesTournament = configuration.configShuffleIndexesTournament(baseGrienwank, griewank,
                                                                                 tools.cxTwoPoint)
-    resultsShuffleIndexesTournament = ag.start(200, 1, SIZE, toolShuffleIndexesTournament)
+    resultsShuffleIndexesTournament = ag.start(50, 1, SIZE, toolShuffleIndexesTournament)
     saveBestResult(resultsShuffleIndexesTournament[1], "results/ag_grienwank_shuffle_indexes_tournament.csv")
     print("")
 
     print("********** grienwank - mate: cxTwoPoint - mutate: mutShuffleIndexes - select: selRoulette **********")
     toolShuffleIndexesRoulette = configuration.configShuffleIndexesRoulette(baseGrienwank, griewank,
                                                                             tools.cxTwoPoint)
-    resultsShuffleIndexesRoulette = ag.start(200, 1, SIZE, toolShuffleIndexesRoulette)
+    resultsShuffleIndexesRoulette = ag.start(50, 1, SIZE, toolShuffleIndexesRoulette)
     saveBestResult(resultsShuffleIndexesRoulette[1], "results/ag_grienwank_shuffle_indexes_roulette.csv")
     print("")
 
     print("********** grienwank - mate: cxTwoPoint - mutate: mutUniformInt - select: selTournament **********")
     toolUniformIntTournament = configuration.configUniformIntTournament(baseGrienwank, griewank, tools.cxTwoPoint)
-    resultsUniformIntTournament = ag.start(200, 1, SIZE, toolUniformIntTournament)
+    resultsUniformIntTournament = ag.start(50, 1, SIZE, toolUniformIntTournament)
     saveBestResult(resultsUniformIntTournament[1], "results/ag_grienwank_uniform_int_tournament.csv")
     print("")
 
     print("********** grienwank - mate: cxTwoPoint - mutate: mutUniforInt - select: selRoulette **********")
     toolUniformIntRoulette = configuration.configUniformIntRoulette(baseGrienwank, griewank, tools.cxTwoPoint)
-    resultsUniformIntRoulette = ag.start(200, 1, SIZE, toolUniformIntRoulette)
+    resultsUniformIntRoulette = ag.start(50, 1, SIZE, toolUniformIntRoulette)
     saveBestResult(resultsUniformIntRoulette[1], "results/ag_grienwank_uniform_int_roulette.csv")
     print("")
 
@@ -39,26 +39,26 @@ def grienwankEEPlus(ee, configuration):
     print("********** grienwank - mate: cxTwoPoint - mutate: mutShuffleIndexes - select: selTournament **********")
     toolShuffleIndexesTournament = configuration.configShuffleIndexesTournament(baseGrienwank, griewank,
                                                                                 tools.cxTwoPoint)
-    resultsShuffleIndexesTournament = ee.startPlus(200, 1, SIZE, toolShuffleIndexesTournament)
+    resultsShuffleIndexesTournament = ee.startPlus(50, 1, SIZE, toolShuffleIndexesTournament)
     saveBestResult(resultsShuffleIndexesTournament[1], "results/ee_plus_grienwank_shuffle_indexes_tournament.csv")
     print("")
 
     print("********** grienwank - mate: cxTwoPoint - mutate: mutShuffleIndexes - select: selRoulette **********")
     toolShuffleIndexesRoulette = configuration.configShuffleIndexesRoulette(baseGrienwank, griewank,
                                                                             tools.cxTwoPoint)
-    resultsShuffleIndexesRoulette = ee.startPlus(200, 1, SIZE, toolShuffleIndexesRoulette)
+    resultsShuffleIndexesRoulette = ee.startPlus(50, 1, SIZE, toolShuffleIndexesRoulette)
     saveBestResult(resultsShuffleIndexesRoulette[1], "results/ee_plus_grienwank_shuffle_indexes_roulette.csv")
     print("")
 
     print("********** grienwank - mate: cxTwoPoint - mutate: mutUniformInt - select: selTournament **********")
     toolUniformIntTournament = configuration.configUniformIntTournament(baseGrienwank, griewank, tools.cxTwoPoint)
-    resultsUniformIntTournament = ee.startPlus(200, 1, SIZE, toolUniformIntTournament)
+    resultsUniformIntTournament = ee.startPlus(50, 1, SIZE, toolUniformIntTournament)
     saveBestResult(resultsUniformIntTournament[1], "results/ee_plus_grienwank_uniform_int_tournament.csv")
     print("")
 
     print("********** grienwank - mate: cxTwoPoint - mutate: mutUniforInt - select: selRoulette **********")
     toolUniformIntRoulette = configuration.configUniformIntRoulette(baseGrienwank, griewank, tools.cxTwoPoint)
-    resultsUniformIntRoulette = ee.startPlus(200, 1, SIZE, toolUniformIntRoulette)
+    resultsUniformIntRoulette = ee.startPlus(50, 1, SIZE, toolUniformIntRoulette)
     saveBestResult(resultsUniformIntRoulette[1], "results/ee_plus_grienwank_uniform_int_roulette.csv")
     print("")
 
@@ -68,25 +68,25 @@ def grienwankEEComma(ee, configuration):
     print("********** grienwank - mate: cxTwoPoint - mutate: mutShuffleIndexes - select: selTournament **********")
     toolShuffleIndexesTournament = configuration.configShuffleIndexesTournament(baseGrienwank, griewank,
                                                                                 tools.cxTwoPoint)
-    resultsShuffleIndexesTournament = ee.startComma(200, 1, SIZE, toolShuffleIndexesTournament)
+    resultsShuffleIndexesTournament = ee.startComma(50, 1, SIZE, toolShuffleIndexesTournament)
     saveBestResult(resultsShuffleIndexesTournament[1], "results/ee_comma_grienwank_shuffle_indexes_tournament.csv")
     print("")
 
     print("********** grienwank - mate: cxTwoPoint - mutate: mutShuffleIndexes - select: selRoulette **********")
     toolShuffleIndexesRoulette = configuration.configShuffleIndexesRoulette(baseGrienwank, griewank,
                                                                             tools.cxTwoPoint)
-    resultsShuffleIndexesRoulette = ee.startComma(200, 1, SIZE, toolShuffleIndexesRoulette)
+    resultsShuffleIndexesRoulette = ee.startComma(50, 1, SIZE, toolShuffleIndexesRoulette)
     saveBestResult(resultsShuffleIndexesRoulette[1], "results/ee_comma_grienwank_shuffle_indexes_roulette.csv")
     print("")
 
     print("********** grienwank - mate: cxTwoPoint - mutate: mutUniformInt - select: selTournament **********")
     toolUniformIntTournament = configuration.configUniformIntTournament(baseGrienwank, griewank, tools.cxTwoPoint)
-    resultsUniformIntTournament = ee.startComma(200, 1, SIZE, toolUniformIntTournament)
+    resultsUniformIntTournament = ee.startComma(50, 1, SIZE, toolUniformIntTournament)
     saveBestResult(resultsUniformIntTournament[1], "results/ee_comma_grienwank_uniform_int_tournament.csv")
     print("")
 
     print("********** grienwank - mate: cxTwoPoint - mutate: mutUniforInt - select: selRoulette **********")
     toolUniformIntRoulette = configuration.configUniformIntRoulette(baseGrienwank, griewank, tools.cxTwoPoint)
-    resultsUniformIntRoulette = ee.startComma(200, 1, SIZE, toolUniformIntRoulette)
+    resultsUniformIntRoulette = ee.startComma(50, 1, SIZE, toolUniformIntRoulette)
     saveBestResult(resultsUniformIntRoulette[1], "results/ee_comma_grienwank_uniform_int_roulette.csv")
     print("")
