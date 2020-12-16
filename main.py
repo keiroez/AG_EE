@@ -3,7 +3,7 @@ from evolutionary_strategies import EvolutionaryStrategies
 from configuration import Configuration
 from secretWord import *
 from eightQueens import *
-from chuangF1 import *
+from grienwank import *
 from helpers import getGenSolveProblem, getLogArray, plotCharComparation
 from readFiles import *
 
@@ -12,15 +12,15 @@ if __name__ == '__main__':
     ag = GeneticAlgorithms()
     ee = EvolutionaryStrategies()
     configuration = Configuration()
-    readChuang_f1()
-    # readSecretWord()
-    # readEightQueens()
+    readGrienwank()
+    readSecretWord()
+    readEightQueens()
 
-    # chuangF1AG(ag, configuration)
-    # chuangF1EEComma(ee, configuration)
-    # chuangF1EEPlus(ee, configuration)
+    ''' 
+    grienwankAG(ag, configuration)
+    grienwankEEComma(ee, configuration)
+    grienwankEEPlus(ee, configuration)
 
-'''
     secretWordAG(ag, configuration)
     secretWordEEPlus(ee, configuration)
     secretWordEEComma(ee, configuration)
@@ -29,11 +29,11 @@ if __name__ == '__main__':
     eightQueensEEPlus(ee, configuration)
     eightQueensEEComma(ee, configuration)
     
-   
+  
 
 best1, gen1 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_roulette.csv')
 best2, gen2 = getLogArray('min', 'results/ag_eight_queens_shuffle_indexes_tournament.csv')
-best3, gen3 = getLogArray('min', 'results/ag_eight_queens_uniform_int_roulette.csv')
+best3, gen3 = getLogArray('min', 'results/ag_eight_queens_uniform_int_roulette.csv')c
 best4, gen4 = getLogArray('min', 'results/ag_eight_queens_uniform_int_tournament.csv')
 
 plotCharComparation(best1, gen1, best2, gen2, best3, gen3, best4, gen4)

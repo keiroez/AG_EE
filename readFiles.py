@@ -68,7 +68,7 @@ def readSecretWord():
 
     print("\n\n\n(PALAVRA CHAVE) - Melhor geração da conf de Ag TwoShuffleIndexesRoulette: {}".format(bestGenAgSecretWordTwoShuffleIndexesRoulette))
     print("(PALAVRA CHAVE) - Melhor geração da conf de Ag TwoShuffleIndexesTournament: {}".format(bestGenAgSecretWordTwoShuffleIndexesTournament))
-    print("\n\n\n(PALAVRA CHAVE) - Melhor geração da conf de Ag OneShuffleIndexesRoulette: {}".format(bestGenAgSecretWordOneShuffleIndexesRoulette))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ag OneShuffleIndexesRoulette: {}".format(bestGenAgSecretWordOneShuffleIndexesRoulette))
     print("(PALAVRA CHAVE) - Melhor geração da conf de Ag OneShuffleIndexesTournament: {}".format(bestGenAgSecretWordOneShuffleIndexesTournament))
     print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus TwoShuffleIndexesRoulette: {}".format(bestGenEePlusSecretWordTwoShuffleIndexesRoulette))
     print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus TwoShuffleIndexesTournament: {}".format(bestGenEePlusSecretWordTwoShuffleIndexesTournament))
@@ -79,53 +79,53 @@ def readSecretWord():
     print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma OneShuffleIndexesRoulette: {}".format(bestGenEeCommaSecretWordOneShuffleIndexesRoulette))
     print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma OneShuffleIndexesTournament: {}".format(bestGenEeCommaSecretWordOneShuffleIndexesTournament))
 
-def readChuang_f1():
-    bestGenAgChuangShuffleIndexesRoulette = getGenSolveProblem('results/ag_chuang_f1_shuffle_indexes_roulette.csv',
+def readGrienwank():
+    bestGenAgGrienwankShuffleIndexesRoulette = getGenSolveProblem('results/ag_grienwank_shuffle_indexes_roulette.csv',
                                                                'min', minValue=0.0)
-    bestGenAgChuangShuffleIndexesTournament = getGenSolveProblem('results/ag_chuang_f1_shuffle_indexes_tournament.csv',
+    bestGenAgGrienwankShuffleIndexesTournament = getGenSolveProblem('results/ag_grienwank_shuffle_indexes_tournament.csv',
                                                                  'min', minValue=0.0)
-    bestGenAgChuangUniformIntRoulette = getGenSolveProblem('results/ag_chuang_f1_uniform_int_roulette.csv', 'min',
+    bestGenAgGrienwankUniformIntRoulette = getGenSolveProblem('results/ag_grienwank_uniform_int_roulette.csv', 'min',
                                                            minValue=0.0)
-    bestGenAgChuangUniformIntTournament = getGenSolveProblem('results/ag_chuang_f1_uniform_int_tournament.csv', 'min',
+    bestGenAgGrienwankUniformIntTournament = getGenSolveProblem('results/ag_grienwank_uniform_int_tournament.csv', 'min',
                                                              minValue=0.0)
-    bestGenEePlusChuangShuffleIndexesRoulette = getGenSolveProblem(
-        'results/ee_plus_chuang_f1_shuffle_indexes_roulette.csv', 'min', minValue=0.0)
-    bestGenEePlusChuangShuffleIndexesTournament = getGenSolveProblem(
-        'results/ee_plus_chuang_f1_shuffle_indexes_tournament.csv', 'min', minValue=0.0)
-    bestGenEePlusChuangUniformIntRoulette = getGenSolveProblem('results/ee_plus_chuang_f1_uniform_int_roulette.csv',
+    bestGenEePlusGrienwankShuffleIndexesRoulette = getGenSolveProblem(
+        'results/ee_plus_grienwank_shuffle_indexes_roulette.csv', 'min', minValue=0.0)
+    bestGenEePlusGrienwankShuffleIndexesTournament = getGenSolveProblem(
+        'results/ee_plus_grienwank_shuffle_indexes_tournament.csv', 'min', minValue=0.0)
+    bestGenEePlusGrienwankUniformIntRoulette = getGenSolveProblem('results/ee_plus_grienwank_uniform_int_roulette.csv',
                                                                'min', minValue=0.0)
-    bestGenEePlusChuangUniformIntTournament = getGenSolveProblem('results/ee_plus_chuang_f1_uniform_int_tournament.csv',
+    bestGenEePlusGrienwankUniformIntTournament = getGenSolveProblem('results/ee_plus_grienwank_uniform_int_tournament.csv',
                                                                  'min', minValue=0.0)
-    bestGenEeCommaChuangShuffleIndexesRoulette = getGenSolveProblem(
-        'results/ee_comma_chuang_f1_shuffle_indexes_roulette.csv', 'min', minValue=0.0)
-    bestGenEeCommaChuangShuffleIndexesTournament = getGenSolveProblem(
-        'results/ee_comma_chuang_f1_shuffle_indexes_tournament.csv', 'min', minValue=0.0)
-    bestGenEeCommaChuangUniformIntRoulette = getGenSolveProblem('results/ee_comma_chuang_f1_uniform_int_roulette.csv',
+    bestGenEeCommaGrienwankShuffleIndexesRoulette = getGenSolveProblem(
+        'results/ee_comma_grienwank_shuffle_indexes_roulette.csv', 'min', minValue=0.0)
+    bestGenEeCommaGrienwankShuffleIndexesTournament = getGenSolveProblem(
+        'results/ee_comma_grienwank_shuffle_indexes_tournament.csv', 'min', minValue=0.0)
+    bestGenEeCommaGrienwankUniformIntRoulette = getGenSolveProblem('results/ee_comma_grienwank_uniform_int_roulette.csv',
                                                                 'min', minValue=0.0)
-    bestGenEeCommaChuangUniformIntTournament = getGenSolveProblem(
-        'results/ee_comma_chuang_f1_uniform_int_tournament.csv', 'min', minValue=0.0)
+    bestGenEeCommaGrienwankUniformIntTournament = getGenSolveProblem(
+        'results/ee_comma_grienwank_uniform_int_tournament.csv', 'min', minValue=0.0)
 
-    print("\n\n\n(CHUANG F1) - Melhor geração da conf de Ag shuffleIndexesRoulette: {}".format(
-        bestGenAgChuangShuffleIndexesRoulette))
-    print("(CHUANG F1) - Melhor geração da conf de Ag shuffleIndexesTournament: {}".format(
-        bestGenAgChuangShuffleIndexesTournament))
-    print("(CHUANG F1) - Melhor geração da conf de Ag uniformIntRoulette: {}".format(bestGenAgChuangUniformIntRoulette))
-    print("(CHUANG F1) - Melhor geração da conf de Ag uniformIntTournament: {}".format(
-        bestGenAgChuangUniformIntTournament))
-    print("(CHUANG F1) - Melhor geração da conf de Ee Plus shuffleIndexesRoulette: {}".format(
-        bestGenEePlusChuangShuffleIndexesRoulette))
-    print("(CHUANG F1) - Melhor geração da conf de Ee Plus shuffleIndexesTournament: {}".format(
-        bestGenEePlusChuangShuffleIndexesTournament))
-    print("(CHUANG F1) - Melhor geração da conf de Ee Plus uniformIntRoulette: {}".format(
-        bestGenEePlusChuangUniformIntRoulette))
-    print("(CHUANG F1) - Melhor geração da conf de Ee Plus uniformIntTournament: {}".format(
-        bestGenEePlusChuangUniformIntTournament))
-    print("(CHUANG F1) - Melhor geração da conf de Ee Comma shuffleIndexesRoulette: {}".format(
-        bestGenEeCommaChuangShuffleIndexesRoulette))
-    print("(CHUANG F1) - Melhor geração da conf de Ee Comma shuffleIndexesTournament: {}".format(
-        bestGenEeCommaChuangShuffleIndexesTournament))
-    print("(CHUANG F1) - Melhor geração da conf de Ee Comma uniformIntRoulette: {}".format(
-        bestGenEeCommaChuangUniformIntRoulette))
-    print("(CHUANG F1) - Melhor geração da conf de Ee Comma uniformIntTournament: {}".format(
-        bestGenEeCommaChuangUniformIntTournament))
+    print("\n\n\n(GRIENWANK) - Melhor geração da conf de Ag shuffleIndexesRoulette: {}".format(
+        bestGenAgGrienwankShuffleIndexesRoulette))
+    print("(GRIENWANK) - Melhor geração da conf de Ag shuffleIndexesTournament: {}".format(
+        bestGenAgGrienwankShuffleIndexesTournament))
+    print("(GRIENWANK) - Melhor geração da conf de Ag uniformIntRoulette: {}".format(bestGenAgGrienwankUniformIntRoulette))
+    print("(GRIENWANK) - Melhor geração da conf de Ag uniformIntTournament: {}".format(
+        bestGenAgGrienwankUniformIntTournament))
+    print("(GRIENWANK) - Melhor geração da conf de Ee Plus shuffleIndexesRoulette: {}".format(
+        bestGenEePlusGrienwankShuffleIndexesRoulette))
+    print("(GRIENWANK) - Melhor geração da conf de Ee Plus shuffleIndexesTournament: {}".format(
+        bestGenEePlusGrienwankShuffleIndexesTournament))
+    print("(GRIENWANK) - Melhor geração da conf de Ee Plus uniformIntRoulette: {}".format(
+        bestGenEePlusGrienwankUniformIntRoulette))
+    print("(GRIENWANK) - Melhor geração da conf de Ee Plus uniformIntTournament: {}".format(
+        bestGenEePlusGrienwankUniformIntTournament))
+    print("(GRIENWANK) - Melhor geração da conf de Ee Comma shuffleIndexesRoulette: {}".format(
+        bestGenEeCommaGrienwankShuffleIndexesRoulette))
+    print("(GRIENWANK) - Melhor geração da conf de Ee Comma shuffleIndexesTournament: {}".format(
+        bestGenEeCommaGrienwankShuffleIndexesTournament))
+    print("(GRIENWANK) - Melhor geração da conf de Ee Comma uniformIntRoulette: {}".format(
+        bestGenEeCommaGrienwankUniformIntRoulette))
+    print("(GRIENWANK) - Melhor geração da conf de Ee Comma uniformIntTournament: {}".format(
+        bestGenEeCommaGrienwankUniformIntTournament))
 
