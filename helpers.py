@@ -24,7 +24,7 @@ def plotCharComparation(best1, gen1, best2, gen2, best3, gen3, best4, gen4):
 
     fig, ax = plt.subplots()
 
-    line1, = ax.plot(gen1, best1, label='Melhor resultado')
+    line1, = ax.plot(gen1, best1, label='1 Melhor resultado')
     line1.set_dashes([2, 2, 10, 2])
 
     line2, = ax.plot(gen2, best2, label='2 melhor resultado')
@@ -33,8 +33,8 @@ def plotCharComparation(best1, gen1, best2, gen2, best3, gen3, best4, gen4):
 
     line4, = ax.plot(gen4, best4, label='4 melhor resultado')
 
+
     ax.legend()
-    plt.yscale('log')
     plt.show()
 
 def generateWord(min, max):
