@@ -26,30 +26,32 @@ def readEightQueens():
     bestGenEeCommaEightQueensUniformIntTournament = getGenSolveProblem(
         'results/ee_comma_eight_queens_uniform_int_tournament.csv', 'min', minValue=0)
 
-    print("\n\n\n(8 RAINHAS) - Melhor geração da conf de Ag shuffleIndexesRoulette: {}".format(
-        bestGenAgEightQueensShuffleIndexesRoulette))
-    print("(8 RAINHAS) - Melhor geração da conf de Ag shuffleIndexesTournament: {}".format(
+
+    print("\n\n\n(8 RAINHAS) - Melhor geração da conf de Ag shuffleIndexesTournament: {}".format(
         bestGenAgEightQueensShuffleIndexesTournament))
-    print("(8 RAINHAS) - Melhor geração da conf de Ag uniformIntRoulette: {}".format(
-        bestGenAgEightQueensUniformIntRoulette))
+    print("(8 RAINHAS) - Melhor geração da conf de Ag shuffleIndexesRoulette: {}".format(
+        bestGenAgEightQueensShuffleIndexesRoulette))
     print("(8 RAINHAS) - Melhor geração da conf de Ag uniformIntTournament: {}".format(
         bestGenAgEightQueensUniformIntTournament))
+    print("(8 RAINHAS) - Melhor geração da conf de Ag uniformIntRoulette: {}".format(
+        bestGenAgEightQueensUniformIntRoulette))
     print("(8 RAINHAS) - Melhor geração da conf de Ee Plus shuffleIndexesRoulette: {}".format(
         bestGenEePlusEightQueensShuffleIndexesRoulette))
     print("(8 RAINHAS) - Melhor geração da conf de Ee Plus shuffleIndexesTournament: {}".format(
         bestGenEePlusEightQueensShuffleIndexesTournament))
-    print("(8 RAINHAS) - Melhor geração da conf de Ee Plus uniformIntRoulette: {}".format(
-        bestGenEePlusEightQueensUniformIntRoulette))
     print("(8 RAINHAS) - Melhor geração da conf de Ee Plus uniformIntTournament: {}".format(
         bestGenEePlusEightQueensUniformIntTournament))
+    print("(8 RAINHAS) - Melhor geração da conf de Ee Plus uniformIntRoulette: {}".format(
+        bestGenEePlusEightQueensUniformIntRoulette))
     print("(8 RAINHAS) - Melhor geração da conf de Ee Comma shuffleIndexesRoulette: {}".format(
         bestGenEeCommaEightQueensShuffleIndexesRoulette))
     print("(8 RAINHAS) - Melhor geração da conf de Ee Comma shuffleIndexesTournament: {}".format(
         bestGenEeCommaEightQueensShuffleIndexesTournament))
-    print("(8 RAINHAS) - Melhor geração da conf de Ee Comma uniformIntRoulette: {}".format(
-        bestGenEeCommaEightQueensUniformIntRoulette))
     print("(8 RAINHAS) - Melhor geração da conf de Ee Comma uniformIntTournament: {}".format(
         bestGenEeCommaEightQueensUniformIntTournament))
+    print("(8 RAINHAS) - Melhor geração da conf de Ee Comma uniformIntRoulette: {}".format(
+        bestGenEeCommaEightQueensUniformIntRoulette))
+
 
 
 def readSecretWord():
@@ -66,18 +68,30 @@ def readSecretWord():
     bestGenEeCommaSecretWordOneShuffleIndexesRoulette = getGenSolveProblem('results/ee_comma_secret_word_one_point_shuffle_indexes_roulette.csv', 'max', maxValue=1)
     bestGenEeCommaSecretWordOneShuffleIndexesTournament = getGenSolveProblem('results/ee_comma_secret_word_one_point_shuffle_indexes_tournament.csv', 'max', maxValue=1)
 
-    print("\n\n\n(PALAVRA CHAVE) - Melhor geração da conf de Ag TwoShuffleIndexesRoulette: {}".format(bestGenAgSecretWordTwoShuffleIndexesRoulette))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ag TwoShuffleIndexesTournament: {}".format(bestGenAgSecretWordTwoShuffleIndexesTournament))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ag OneShuffleIndexesRoulette: {}".format(bestGenAgSecretWordOneShuffleIndexesRoulette))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ag OneShuffleIndexesTournament: {}".format(bestGenAgSecretWordOneShuffleIndexesTournament))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus TwoShuffleIndexesRoulette: {}".format(bestGenEePlusSecretWordTwoShuffleIndexesRoulette))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus TwoShuffleIndexesTournament: {}".format(bestGenEePlusSecretWordTwoShuffleIndexesTournament))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus OneShuffleIndexesRoulette: {}".format(bestGenEePlusSecretWordOneShuffleIndexesRoulette))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus OneShuffleIndexesTournament: {}".format(bestGenEePlusSecretWordOneShuffleIndexesTournament))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma TwoShuffleIndexesRoulette: {}".format(bestGenEeCommaSecretWordTwoShuffleIndexesRoulette))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma TwoShuffleIndexesTournament: {}".format(bestGenEeCommaSecretWordTwoShuffleIndexesTournament))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma OneShuffleIndexesRoulette: {}".format(bestGenEeCommaSecretWordOneShuffleIndexesRoulette))
-    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma OneShuffleIndexesTournament: {}".format(bestGenEeCommaSecretWordOneShuffleIndexesTournament))
+    print("\n\n\n(PALAVRA CHAVE) - Melhor geração da conf de Ag TwoShuffleIndexesTournament: {}".format(
+        bestGenAgSecretWordTwoShuffleIndexesTournament))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ag TwoShuffleIndexesRoulette: {}".format(
+        bestGenAgSecretWordTwoShuffleIndexesRoulette))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ag OneShuffleIndexesTournament: {}".format(
+        bestGenAgSecretWordOneShuffleIndexesTournament))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ag OneShuffleIndexesRoulette: {}".format(
+        bestGenAgSecretWordOneShuffleIndexesRoulette))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus TwoShuffleIndexesTournament: {}".format(
+        bestGenEePlusSecretWordTwoShuffleIndexesTournament))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus TwoShuffleIndexesRoulette: {}".format(
+        bestGenEePlusSecretWordTwoShuffleIndexesRoulette))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus OneShuffleIndexesTournament: {}".format(
+        bestGenEePlusSecretWordOneShuffleIndexesTournament))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Plus OneShuffleIndexesRoulette: {}".format(
+        bestGenEePlusSecretWordOneShuffleIndexesRoulette))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma TwoShuffleIndexesTournament: {}".format(
+        bestGenEeCommaSecretWordTwoShuffleIndexesTournament))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma TwoShuffleIndexesRoulette: {}".format(
+        bestGenEeCommaSecretWordTwoShuffleIndexesRoulette))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma OneShuffleIndexesTournament: {}".format(
+        bestGenEeCommaSecretWordOneShuffleIndexesTournament))
+    print("(PALAVRA CHAVE) - Melhor geração da conf de Ee Comma OneShuffleIndexesRoulette: {}".format(
+        bestGenEeCommaSecretWordOneShuffleIndexesRoulette))
 
 def readGrienwank():
     bestGenAgGrienwankShuffleIndexesRoulette = getGenSolveProblem('results/ag_grienwank_shuffle_indexes_roulette.csv',
@@ -109,7 +123,8 @@ def readGrienwank():
         bestGenAgGrienwankShuffleIndexesRoulette))
     print("(GRIENWANK) - Melhor geração da conf de Ag shuffleIndexesTournament: {}".format(
         bestGenAgGrienwankShuffleIndexesTournament))
-    print("(GRIENWANK) - Melhor geração da conf de Ag uniformIntRoulette: {}".format(bestGenAgGrienwankUniformIntRoulette))
+    print("(GRIENWANK) - Melhor geração da conf de Ag uniformIntRoulette: {}".format(
+        bestGenAgGrienwankUniformIntRoulette))
     print("(GRIENWANK) - Melhor geração da conf de Ag uniformIntTournament: {}".format(
         bestGenAgGrienwankUniformIntTournament))
     print("(GRIENWANK) - Melhor geração da conf de Ee Plus shuffleIndexesRoulette: {}".format(

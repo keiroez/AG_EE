@@ -13,8 +13,8 @@ if __name__ == '__main__':
     ee = EvolutionaryStrategies()
     configuration = Configuration()
     readGrienwank()
-    readSecretWord()
     readEightQueens()
+    readSecretWord()
 
     ''' 
     grienwankAG(ag, configuration)
